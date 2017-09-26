@@ -9,9 +9,11 @@ import {ProcessService} from '../process.service'
 })
 export class ApplyComponent implements OnInit {
 
-  constructor(private _process : ProcessService) { }
+  constructor(private _process : ProcessService) {
+    this.getPosts();
+   }
 
-  jsonObj : Object= {};
+  jsonObj = {};
 
   ngOnInit() {
     // $('#aa').affix({

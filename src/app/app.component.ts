@@ -7,5 +7,16 @@ import {ProcessService} from './process.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-}
+  constructor(private _process : ProcessService) {
+    this.getPosts();
+  }
+
+ jsonObj = {};
+
+    getPosts(){
+      this._process.getPost().subscribe(result => {
+          this.jsonObj =result;
+      });
+  }
+  }
+  

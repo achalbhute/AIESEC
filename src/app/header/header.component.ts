@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProcessService} from '../process.service'
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _process : ProcessService) {
+   }
+
+  jsonObj = {};
 
   ngOnInit() {
+    this.getPosts();    
   }
 
+  getPosts(){
+    this._process.getPost().subscribe(result => {
+        this.jsonObj =result;
+    });
+}
 }
