@@ -12,6 +12,7 @@ export class DetailComponent implements OnInit {
   }
 
  jsonObj = {};
+  required : string;
 
  ngOnInit() {
    this.getPosts();    
@@ -19,7 +20,12 @@ export class DetailComponent implements OnInit {
 
  getPosts(){
    this._process.getPost().subscribe(result => {
+    // set(result);
        this.jsonObj =result;
    });
+}
+ set(Object ){
+//var sin_obj = $filter('filter')(this.jsonObj,function(d){return d.id === 2})[0];
+//return this.jsonObj.find();
 }
 }

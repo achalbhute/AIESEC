@@ -31,15 +31,53 @@
   </div>
   <div id="prerequisites">
     <h3> Prerequisites </h3>
-    <h4>Backgrounds</h4>
-    <p>{{jsonObj.sdg_info.sdg_target.target}}</p>
-    <h4> Role description</h4>
-    <p>{{jsonObj.sdg_info.sdg_target.description}}</p>
-    <h4> Main activities</h4>
-    <ul>
-      <div *ngFor="let activity of jsonObj.role_info.learning_points_list">
-        <li>{{activity}}</li>
-      </div>
-    </ul>
+    <table class="table">
+      <tr>
+        <h4>Backgrounds</h4>
+      </tr>
+      <tr *ngFor="let background of jsonObj.backgrounds">
+        <td><strong>{{background.option}}</strong> </td>
+        <td>: {{background.name}}</td>
+      </tr>
+    </table>
+
+    <table class="table">
+      <tr>
+        <h4>Skills</h4>
+      </tr>
+     <tr *ngFor="let skill of jsonObj.skills">
+        <td><strong>{{skill.option}}</strong> </td>
+        <td>: {{skill.name}}</td>
+      </tr>
+    </table>
+
+    <table class="table">
+      <tr>
+        <h4>Nationalities</h4>
+      </tr>
+      <tr *ngFor="let nation of jsonObj.nationalities">
+          <td><strong>{{nation.option}}</strong> </td>
+          <td>: {{nation.name}}</td>
+        </tr>
+    </table>
+
+    <table class="table">
+        <tr>
+          <h4>Languages</h4>
+        </tr>
+        <tr *ngFor="let language of jsonObj.languages">
+            <td><strong>{{language.option}}</strong> </td>
+            <td>: {{language.name}}</td>
+          </tr>
+      </table>
+
+      <table class="table">
+          <tr>
+            <h4>Study Levels</h4>
+          </tr>
+          <tr *ngFor="let study_lvl of jsonObj.study_levels">
+              <td>{{study_lvl.name}}</td>
+            </tr>
+        </table>
   </div>
 </div>
