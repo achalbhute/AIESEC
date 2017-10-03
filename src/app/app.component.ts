@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ProcessService} from './process.service'
+//var bodyParser = require('body-parser');
 
 @Component({
   selector: 'app-root',
@@ -18,5 +19,6 @@ export class AppComponent {
           this.jsonObj =result;
       });
   }
+  //bodyParser.
   }
   

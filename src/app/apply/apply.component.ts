@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import $ from 'jquery';
+//import $ from 'jquery';
 import {ProcessService} from '../process.service'
 
 @Component({
@@ -16,14 +16,7 @@ export class ApplyComponent implements OnInit {
   jsonObj = {};
    obj = {};
   ngOnInit() {
-    // $('#aa').affix({
-    //   offset: {
-    //     top: 100,
-    //     bottom: function () {
-    //       return (this.bottom = $('.footer').outerHeight(true))
-    //     }
-    //   }
-    // })
+    
   }
 
   getPosts(){
