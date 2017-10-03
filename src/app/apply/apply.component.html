@@ -1,7 +1,13 @@
 <div class="nav-staked" id="aa" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+    
   <table class="table">
     <tr>
-      <h4><small>Language</small></h4>
+      <td>
+    <h4><small>Language</small></h4> 
+  </td>
+  <td>
+    <span class="glyphicon glyphicon-pencil" (click)="onClick(jsonObj.specifics_info.salary)"></span>  
+  </td>  
     </tr>
     <tr *ngFor="let language of jsonObj.languages"> {{language.name}} </tr>
     <tr> <h4><small>Salary:</small></h4></tr>

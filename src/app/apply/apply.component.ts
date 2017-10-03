@@ -14,7 +14,7 @@ export class ApplyComponent implements OnInit {
    }
 
   jsonObj = {};
-
+   obj = {};
   ngOnInit() {
     // $('#aa').affix({
     //   offset: {
@@ -31,4 +31,12 @@ export class ApplyComponent implements OnInit {
         this.jsonObj =result;
     });
 }
+
+  onClick(number: Number)
+  {
+    alert("hello");
+    this._process.updateData(number).subscribe(result =>{
+      this.jsonObj =result;
+    })
+  }
 }

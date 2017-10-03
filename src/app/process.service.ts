@@ -14,8 +14,8 @@ export class ProcessService {
     .map((response: Response) => response.json());
   }
 
-  updateData(){
-    return this.http.patch('', this.newObj)
+  updateData(number : Number){
+    return this.http.patch('http://gisapi-web-staging-1636833739.eu-west-1.elb.amazonaws.com/v2/opportunities/525', number)
     .map((response: Response) => response.json());
   }
 }
