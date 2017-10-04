@@ -24,9 +24,8 @@
     <p>{{jsonObj.sdg_info.sdg_target.description}}</p>
     <h4> Main activities</h4>
     <ul>
-      <div *ngFor="let activity of jsonObj.role_info.learning_points_list">
-        <li>{{activity}}</li>
-      </div>
+      <li *ngFor="let activity of jsonObj.role_info.learning_points_list">
+       {{activity}}</li> 
     </ul>
   </div>
   <div id="prerequisites">
