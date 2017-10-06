@@ -1,25 +1,23 @@
 import { Component } from '@angular/core';
-import {ProcessService} from './process.service'
+import { ProcessService } from './process.service'
 //var bodyParser = require('body-parser');
 
 @Component({
   selector: 'app-root',
-  
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _process : ProcessService) {
+  constructor(private _process: ProcessService) {
     this.getPosts();
   }
 
- jsonObj = {};
+  jsonObj = {};
 
-    getPosts(){
-      this._process.getPost().subscribe(result => {
-          this.jsonObj =result;
-      });
+  getPosts() {
+    this._process.getPost().subscribe(result => {
+      this.jsonObj = result;
+    });
   }
-  //bodyParser.
-  }
-  
+}

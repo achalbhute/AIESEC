@@ -1,11 +1,17 @@
-<div class="container-fluid">
-    <app-header></app-header>
+<div class="container-fluid" *ngIf="jsonObj?.title; else elseBlock">
+    <app-header [hero]="{'title': jsonObj.title, 'location': jsonObj.location}"></app-header>
     <div class="container-fluid">
         <div class="col-sm-9">
-            <app-detail></app-detail>
+            <app-detail [detail]="jsonObj"></app-detail>
         </div>
         <div class="container col-sm-3">
-            <app-apply></app-apply>
+            <app-apply [apply]="{'languages':jsonObj.languages, 'specifics_info':jsonObj.specifics_info }"></app-apply>
         </div>
     </div>
+    <app-edit-form></app-edit-form>
 </div>
+<ng-template #elseBlock>
+    <div class="container-fluid">
+        Loading
+    </div>
+</ng-template>

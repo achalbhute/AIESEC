@@ -1,4 +1,4 @@
-<div class="cotainer col-sm-3">
+<div class="col-sm-3">
   <ul class="nav nav-stacked" id="sidebar">
     <li role="nav-item">
       <a href="#overview">Overview</a>
@@ -14,7 +14,7 @@
     </li>
   </ul>
 </div>
-<div class="container col-sm-9">
+<div class="col-sm-9">
   <div id="overview">
     <h3> Overview </h3>
     <h5> Sustainable development goal</h5>
@@ -25,7 +25,7 @@
     <h4> Main activities</h4>
     <ul>
       <li *ngFor="let activity of jsonObj.role_info.learning_points_list">
-       {{activity}}</li> 
+        {{activity}}</li>
     </ul>
   </div>
   <div id="prerequisites">
@@ -44,7 +44,7 @@
       <tr>
         <h4>Skills</h4>
       </tr>
-     <tr *ngFor="let skill of jsonObj.skills">
+      <tr *ngFor="let skill of jsonObj.skills">
         <td><strong>{{skill.option}}</strong> </td>
         <td>: {{skill.name}}</td>
       </tr>
@@ -55,28 +55,28 @@
         <h4>Nationalities</h4>
       </tr>
       <tr *ngFor="let nation of jsonObj.nationalities">
-          <td><strong>{{nation.option}}</strong> </td>
-          <td>: {{nation.name}}</td>
-        </tr>
+        <td><strong>{{nation.option}}</strong> </td>
+        <td>: {{nation.name}}</td>
+      </tr>
     </table>
 
     <table class="table">
-        <tr>
-          <h4>Languages</h4>
-        </tr>
-        <tr *ngFor="let language of jsonObj.languages">
-            <td><strong>{{language.option}}</strong> </td>
-            <td>: {{language.name}}</td>
-          </tr>
-      </table>
+      <tr>
+        <h4>Languages</h4>
+      </tr>
+      <tr *ngFor="let language of jsonObj.languages">
+        <td><strong>{{language.option}}</strong> </td>
+        <td>: {{language.name}}</td>
+      </tr>
+    </table>
 
-      <table class="table">
-          <tr>
-            <h4>Study Levels</h4>
-          </tr>
-          <tr *ngFor="let study_lvl of jsonObj.study_levels">
-              <td>{{study_lvl.name}}</td>
-            </tr>
-        </table>
+    <table class="table">
+      <tr>
+        <h4>Study Levels</h4>
+      </tr>
+      <tr *ngFor="let study_lvl of jsonObj.study_levels">
+        <td>{{study_lvl.name}}</td>
+      </tr>
+    </table>
   </div>
 </div>

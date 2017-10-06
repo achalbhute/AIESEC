@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 //import $ from 'jquery';
 import {ProcessService} from '../process.service'
 
@@ -9,21 +9,13 @@ import {ProcessService} from '../process.service'
 })
 export class ApplyComponent implements OnInit {
 
+  @Input('apply') jsonObj:any;
   constructor(private _process : ProcessService) {
-    this.getPosts();
    }
 
-  jsonObj = {};
-   obj = {};
   ngOnInit() {
     
   }
-
-  getPosts(){
-    this._process.getPost().subscribe(result => {
-        this.jsonObj =result;
-    });
-}
 
   onClick(number: Number)
   {

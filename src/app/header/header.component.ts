@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ProcessService} from '../process.service'
 
 @Component({
@@ -8,18 +8,12 @@ import {ProcessService} from '../process.service'
 })
 export class HeaderComponent implements OnInit {
 
+  @Input() hero:any;
+
   constructor(private _process : ProcessService) {
+    
    }
-
-  jsonObj = {};
-
-  ngOnInit() {
-    this.getPosts();    
+  ngOnInit() {   
   }
 
-  getPosts(){
-    this._process.getPost().subscribe(result => {
-        this.jsonObj =result;
-    });
-}
 }

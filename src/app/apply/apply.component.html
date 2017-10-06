@@ -6,7 +6,7 @@
     <h4><small>Language</small></h4> 
   </td>
   <td>
-    <span class="glyphicon glyphicon-pencil" (click)="onClick(jsonObj.specifics_info.salary)"></span>  
+    <span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#myModal"></span>  
   </td>  
     </tr>
     <tr *ngFor="let language of jsonObj.languages"> {{language.name}} </tr>
