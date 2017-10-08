@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ProcessService} from '../process.service'
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 
 @Component({
   selector: 'app-header',
@@ -10,20 +10,20 @@ import * as $ from 'jquery';
 export class HeaderComponent implements OnInit {
 
   @Input() hero:any;
-   $: any;
+   //$: any;
   constructor(private _process : ProcessService) {
   
    }
   ngOnInit() {   
   }
 
-  ngAfterViewInit(){
-   $('#title').editable({
-      type:  'text',
-      pk:    1,
-      name:  'title',
-      url:   'post.php',  
-      title: 'Enter title'
-   });
-  }
+  // ngAfterViewInit(){
+  //  $('#title').editable({
+  //     type:  'text',
+  //     pk:    1,
+  //     name:  'title',
+  //     url:   'post.php',  
+  //     title: 'Enter title'
+  //  });
+  // }
 }
